@@ -26,6 +26,7 @@ public class Main2Activity extends AppCompatActivity {
         harga.setText(b.getString("harga"));
 
         int hrg = Integer.valueOf(b.getString("harga"));
+
         if(hrg > 65500) {
             Toast toast = Toast.makeText(this, "Jangan disini makan malamnya, uang kamu tidak cukup", Toast.LENGTH_LONG);
             toast.show();
@@ -33,5 +34,6 @@ public class Main2Activity extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"Disini aja makan malamnya" , Toast.LENGTH_LONG);
             toast.show();
         }
+
     }
 }

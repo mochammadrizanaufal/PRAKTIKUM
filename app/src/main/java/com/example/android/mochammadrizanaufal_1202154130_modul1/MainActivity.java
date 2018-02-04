@@ -30,13 +30,19 @@ public class MainActivity extends AppCompatActivity {
         mkn = makanan.getText().toString();
         harga=Integer.parseInt(jml)*50000;
 
+        if(mkn.matches("Nasi Uduk")){
             b.putString("resto", "EATBUS");
             b.putString("makanan", makanan.getText().toString());
             b.putString("jumlah", jumlah.getText().toString());
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
+            startActivity(intent);
 
-        startActivity(intent);
+        }else {
+
+            Toast toast = Toast.makeText(this,"Harus Nasi Uduk bre" , Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 
     public void onAbnormal(View view) {
@@ -45,13 +51,18 @@ public class MainActivity extends AppCompatActivity {
         mkn = makanan.getText().toString();
         harga = Integer.parseInt(jml) * 30000;
 
+        if(mkn.matches("Nasi Uduk")){
             b.putString("resto", "ABNORMAL");
             b.putString("makanan", makanan.getText().toString());
             b.putString("jumlah", jumlah.getText().toString());
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
-            Toast.makeText(this, "Jangan makan malam disini,uang kamu tidak cukup", Toast.LENGTH_LONG).show();
+            startActivity(intent);
 
-        startActivity(intent);
+        }else {
+
+            Toast toast = Toast.makeText(this,"Harus Nasi Uduk bre" , Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 }
