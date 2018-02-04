@@ -11,16 +11,17 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     int uangsaku = 65500;
     EditText jumlah;
+    Bundle b = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void onEatbus(View view) {
         Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
-        Bundle b = new Bundle();
         jumlah = (EditText) findViewById(R.id.txt_jumlah);
         String jml = jumlah.getText().toString();
         int harga=Integer.parseInt(jml)*50000;
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onAbnormal(View view) {
         Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
-        Bundle b = new Bundle();
         jumlah = (EditText) findViewById(R.id.txt_jumlah);
         String jml = jumlah.getText().toString();
         int harga = Integer.parseInt(jml) * 30000;
