@@ -13,14 +13,15 @@ public class Main2Activity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
 
+
         TextView resto = (TextView) findViewById(R.id.txt_resto);
-        TextView porsi = (TextView) findViewById(R.id.txt_jumlah2);
+        TextView makanan = (TextView) findViewById(R.id.txt_makanan2);
+        TextView jumlah = (TextView) findViewById(R.id.txt_jumlah2);
         TextView harga = (TextView) findViewById(R.id.txt_harga2);
 
-        resto.setText(b.getCharSequence("resto"));
-        porsi.setText(b.getCharSequence("jumlah"));
-        harga.setText(b.getCharSequence("harga"));
-
-
+        resto.setText(b.getString("resto"));
+        makanan.setText(b.getString("makanan"));
+        jumlah.setText(b.getString("jumlah"));
+        harga.setText(b.getString("harga"));
     }
 }

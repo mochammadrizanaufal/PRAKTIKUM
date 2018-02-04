@@ -49,22 +49,21 @@
         android:text="Menu" />
 
     <TextView
+        android:id="@+id/txt_makanan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3"
         android:gravity="center_horizontal"
-        android:text="Nasi Uduk"
-        android:textSize="25dp"
-        android:id="@+id/textView4" />
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/txt_makanan2"
         android:layout_marginTop="22dp"
         android:gravity="center_horizontal"
         android:text="Porsi"

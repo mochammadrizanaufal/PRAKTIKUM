@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.mochammadrizanaufal_1202154130_modul1.MainActivity.MainActivity">
+    tools:context="com.example.android.mochammadrizanaufal_1202154130_modul1.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -37,16 +37,14 @@
         android:id="@+id/textView2" />
 
     <EditText
-        android:gravity="center_horizontal"
-        android:enabled="false"
-        android:text="Nasi Uduk"
+        android:id="@+id/txt_makanan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="78dp"
-        android:id="@+id/txt_makanan" />
+        android:gravity="center_horizontal" />
 
     <EditText
 
@@ -58,7 +56,7 @@
         android:layout_below="@+id/txt_makanan"
         android:layout_marginTop="40dp"
         android:text=""
-        android:id="@+id/txt_jumlah" />
+        android:id="@+id/txt_porsi" />
 
     <Button
         android:id="@+id/button_eatbus"
@@ -66,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/txt_jumlah"
+        android:layout_below="@+id/txt_porsi"
         android:layout_marginLeft="22dp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="36dp"
