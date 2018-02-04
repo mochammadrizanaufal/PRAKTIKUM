@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    int uangsaku = 65500;
+    //int uangsaku = 65500;
     int harga;
     EditText makanan;
     EditText jumlah;
@@ -30,22 +30,12 @@ public class MainActivity extends AppCompatActivity {
         mkn = makanan.getText().toString();
         harga=Integer.parseInt(jml)*50000;
 
-        if (harga > uangsaku){
+            b.putString("resto", "EATBUS");
+            b.putString("makanan", makanan.getText().toString());
+            b.putString("jumlah", jumlah.getText().toString());
+            b.putString("harga", String.valueOf(harga));
+            intent.putExtras(b);
 
-            b.putString("resto", "EATBUS");
-            b.putString("makanan", makanan.getText().toString());
-            b.putString("jumlah", jumlah.getText().toString());
-            b.putString("harga", String.valueOf(harga));
-            intent.putExtras(b);
-            Toast.makeText(this, "Jangan makan malam disini,uang kamu tidak cukup", Toast.LENGTH_LONG).show();
-        }else{
-            b.putString("resto", "EATBUS");
-            b.putString("makanan", makanan.getText().toString());
-            b.putString("jumlah", jumlah.getText().toString());
-            b.putString("harga", String.valueOf(harga));
-            intent.putExtras(b);
-            Toast.makeText(this, "Disini aja makan malamnya", Toast.LENGTH_LONG).show();
-        }
         startActivity(intent);
     }
 
@@ -55,23 +45,13 @@ public class MainActivity extends AppCompatActivity {
         mkn = makanan.getText().toString();
         harga = Integer.parseInt(jml) * 30000;
 
-
-        if (harga > uangsaku){
-
             b.putString("resto", "ABNORMAL");
             b.putString("makanan", makanan.getText().toString());
             b.putString("jumlah", jumlah.getText().toString());
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
             Toast.makeText(this, "Jangan makan malam disini,uang kamu tidak cukup", Toast.LENGTH_LONG).show();
-        }else{
-            b.putString("resto", "ABNORMAL");
-            b.putString("makanan", makanan.getText().toString());
-            b.putString("jumlah", jumlah.getText().toString());
-            b.putString("harga", String.valueOf(harga));
-            intent.putExtras(b);
-            Toast.makeText(this, "Disini aja makan malamnya", Toast.LENGTH_LONG).show();
-        }
+
         startActivity(intent);
     }
 }

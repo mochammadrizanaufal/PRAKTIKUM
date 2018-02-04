@@ -3,6 +3,7 @@ package com.example.android.mochammadrizanaufal_1202154130_modul1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -23,5 +24,14 @@ public class Main2Activity extends AppCompatActivity {
         makanan.setText(b.getString("makanan"));
         jumlah.setText(b.getString("jumlah"));
         harga.setText(b.getString("harga"));
+
+        int hrg = Integer.valueOf(b.getString("harga"));
+        if(hrg > 65500) {
+            Toast toast = Toast.makeText(this, "Jangan disini makan malamnya, uang kamu tidak cukup", Toast.LENGTH_LONG);
+            toast.show();
+        }else{
+            Toast toast = Toast.makeText(this,"Disini aja makan malamnya" , Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 }
