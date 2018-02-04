@@ -33,17 +33,14 @@ public class MainActivity extends AppCompatActivity {
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
             Toast.makeText(this, "Jangan makan malam disini,uang kamu tidak cukup", Toast.LENGTH_LONG).show();
-
-            startActivity(intent);
         }else{
             b.putString("resto", "EATBUS");
             b.putString("jumlah", jumlah.getText().toString());
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
             Toast.makeText(this, "Disini aja makan malamnya", Toast.LENGTH_LONG).show();
-
-            startActivity(intent);
         }
+        startActivity(intent);
     }
 
     public void onAbnormal(View view) {
@@ -60,16 +57,13 @@ public class MainActivity extends AppCompatActivity {
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
             Toast.makeText(this, "Jangan makan malam disini,uang kamu tidak cukup", Toast.LENGTH_LONG).show();
-
-            startActivity(intent);
         }else{
             b.putString("resto", "EATBUS");
             b.putString("jumlah", jumlah.getText().toString());
             b.putString("harga", String.valueOf(harga));
             intent.putExtras(b);
             Toast.makeText(this, "Disini aja makan malamnya", Toast.LENGTH_LONG).show();
-
-            startActivity(intent);
         }
+        startActivity(intent);
     }
 }
